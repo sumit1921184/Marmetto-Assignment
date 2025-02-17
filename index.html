@@ -7,14 +7,131 @@
     <link rel="stylesheet" href="./style.css">
     <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
     <title>Coding Assesment L2 boilerplate</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
 </head>
 
 <body>
     <!-- Your code goes here -->
-    <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://s3-alpha-sig.figma.com/img/2727/769b/a74736d502746301ed573ed8940fc322?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IIWqPF5ExRWJzxlzSAkuMykO17XTxeGX~lMjRFAmstQm~Qid02MYZ8~vJjs3PaK2KSaV1yMvQq6Sppo1Z6IY1dlV8whgX3gp6Rn-PO8X1iVxctqTOVCp7qVEd7wWqWs6-Y7SHlI6ki~XUfWL4FLCYrolxSoTp-1Wq9S6mMZqgfJf2-peU384Cjm~JkIQ3T3Bxp0~wE62zgRvkWGni7yFS~M1iSnEpZZGlRvMwAmrcYNUhMgRkl3AUlandnEJBkIrETkPBAamRUNFTpWYRJUYtbo-y3RFNArZNBPtZQC-yfwbjgYYQVUAJHlW4OaTeHlcM7chAuDV00A-dJVkttSjmw__"
+                alt="">
+            <p>Marmetto</p>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="icons">
+            <i class="fi fi-rs-search"></i>
+            <i class="fi fi-rs-heart"></i>
+            <i class="fi fi-rs-shopping-cart"></i>
+        </div>
+
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="header">
+        <div class="header-container">
+            <img src="https://s3-alpha-sig.figma.com/img/2727/769b/a74736d502746301ed573ed8940fc322?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IIWqPF5ExRWJzxlzSAkuMykO17XTxeGX~lMjRFAmstQm~Qid02MYZ8~vJjs3PaK2KSaV1yMvQq6Sppo1Z6IY1dlV8whgX3gp6Rn-PO8X1iVxctqTOVCp7qVEd7wWqWs6-Y7SHlI6ki~XUfWL4FLCYrolxSoTp-1Wq9S6mMZqgfJf2-peU384Cjm~JkIQ3T3Bxp0~wE62zgRvkWGni7yFS~M1iSnEpZZGlRvMwAmrcYNUhMgRkl3AUlandnEJBkIrETkPBAamRUNFTpWYRJUYtbo-y3RFNArZNBPtZQC-yfwbjgYYQVUAJHlW4OaTeHlcM7chAuDV00A-dJVkttSjmw__"
+                alt="">
+            <p class="header-container-p1">Cart</p>
+            <p class="header-container-p2">Home &nbsp; > &nbsp; <span class="header-container-p2-span">Cart</span></p>
+        </div>
+
+    </section>
+
+    <section class="cart">
+        <div class="cart-container">
+            <div class="cart-container-table">
+                <table id="cart-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body">
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-container-checkout">
+                <p class="cart-container-checkout-p">Cart Totals</p>
+                <div class="cart-container-checkout-subtotal mt">
+                    <p>Subtotal</p>
+                    <p id="cart-subtotal" class="Subtotal">Rs. 250000</p>
+                </div>
+                <div class="cart-container-checkout-subtotal mt-total">
+                    <p>Total</p>
+                    <p class="total">Rs. 250000</p>
+                </div>
+                <button class="checkout-btn">Check Out</button>
+            </div>
+        </div>
+    </section>
+    <div id="confirmationModal" class="confirmation-modal">
+        <div class="modal-content">
+            <p>Are you sure you want to remove this item?</p>
+            <button id="confirmDelete" class="confirm-btn">Yes</button>
+            <button id="cancelDelete" class="cancel-btn">No</button>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-item">
+                <img src="./assets/trophy.svg" alt="">
+                <div class="footer-item-text">
+                    <p class="footer-item-text-dark">High Quality</p>
+                    <p class="footer-item-text-light">Crafted from top materials</p>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <img src="./assets/badge-check.svg" alt="">
+                <div class="footer-item-text">
+                    <p class="footer-item-text-dark">Warranty Protection</p>
+                    <p class="footer-item-text-light">Over 2 years</p>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <img src="./assets/picking-box.svg" alt="">
+                <div class="footer-item-text">
+                    <p class="footer-item-text-dark">Free Shipping</p>
+                    <p class="footer-item-text-light">Order over 150 $</p>
+                </div>
+            </div>
+
+            <div class="footer-item">
+                <img src="./assets/customer-service.svg" alt="">
+                <div class="footer-item-text">
+                    <p class="footer-item-text-dark">24 / 7 Support</p>
+                    <p class="footer-item-text-light">Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Happy coding 😊 -->
     <script src="./script.js"></script>
 </body>
